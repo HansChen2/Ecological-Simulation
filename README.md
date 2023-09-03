@@ -13,7 +13,7 @@ This is one of the projects of CS575 of Oregon State University in the 2021 spri
 
 ## Result
 
-<img src="https://github.com/HansChen2/Ecological-Simulation/blob/main/graph.PNG" width="450" height="350">
+<img src="https://github.com/HansChen2/Ecological-Simulation/blob/main/graph.PNG" width="600" height="450">
 As we can observe in the graph, the precipitation level directly impacts grain height. There is a positive correlation between high precipitation and increased grain height, and vice versa. Furthermore, when grain height is high, the deer population also increases.
 
 ## Author
