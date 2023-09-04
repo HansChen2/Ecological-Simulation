@@ -118,24 +118,6 @@ void Deer()
     }
 }
 
-void MyAgent()
-{
-    while(NowYear < 2027)
-    {
-        // DoneComputing barrier:
-        #pragma omp barrier
-        
-
-        // DoneAssigning barrier:
-        #pragma omp barrier
-        
-
-        // DonePrinting barrier:
-        #pragma omp barrier
-        
-    }
-}
-
 void Watcher()
 {
     while(NowYear < 2027)
@@ -216,10 +198,6 @@ int main(){
             Watcher( );
         }
 
-        #pragma omp section
-        {
-            MyAgent( );    // your own
-        }
     }       // implied barrier -- all functions must return in order
         // to allow any of them to get past here
 }
