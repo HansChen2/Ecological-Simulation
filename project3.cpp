@@ -180,7 +180,7 @@ int main(){
     
     printf("Year:%3d    Month:%3d    Grain: %3.2lf    Deer: %d    Precipitation : %3.2lf    Temperature: %3.2lf\n",NowYear, NowMonth, NowHeight, NowNumDeer, NowPrecip, NowTemp);
     
-    omp_set_num_threads( 4 );    // same as # of sections
+    omp_set_num_threads( 3 );    // same as # of sections
     #pragma omp parallel sections
     {
         #pragma omp section
