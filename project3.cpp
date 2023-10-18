@@ -128,7 +128,6 @@ void Watcher()
         // DoneComputing barrier:
         #pragma omp barrier
         
-
         // DoneAssigning barrier:
         #pragma omp barrier
         if(NowMonth >= 12){
@@ -139,14 +138,12 @@ void Watcher()
             NowMonth++;
         }
 
-        
         float ang = (  30.*(float)NowMonth + 15.  ) * ( M_PI / 180. );
-
         float temp = AVG_TEMP - AMP_TEMP * cos( ang );
         NowTemp = temp + Ranf( &seed, -RANDOM_TEMP, RANDOM_TEMP );
-
         float precip = AVG_PRECIP_PER_MONTH + AMP_PRECIP_PER_MONTH * sin( ang );
         NowPrecip = precip + Ranf( &seed,  -RANDOM_PRECIP, RANDOM_PRECIP );
+        
         if( NowPrecip < 0. )
                 NowPrecip = 0.;
         
